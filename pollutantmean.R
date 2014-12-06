@@ -6,16 +6,12 @@ pollutantmean <- function(directory, pollutant, id) {
     stop("incorrect pollutant - use either sulfate or nitrate")
   }
   
-  ##next let's separate the possible range for the id files
-  idmin <- min(id)
-  idmax <- max(id)
-  
   ##initialize the count variables
   sum1<-0
   count1<-0
   
   ##the for loop reads each file sequentially
-  for (n in idmin:idmax){
+  for (n in id){
     ##now we correct file id numbers to ensure they are
     ##in the file range and have the proper prefixes 
     if(n<10){
