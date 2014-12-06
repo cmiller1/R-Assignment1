@@ -1,4 +1,4 @@
-pollutantmean <- function(directory, pollutant, id) {
+pollutantmean <- function(directory, pollutant, id=1:332) {
   ##first let's clean the arguments. 
   ##To start we'll check if the pollutant argument is 
   ##one of the two existing pollutants 

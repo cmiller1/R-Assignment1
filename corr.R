@@ -19,7 +19,8 @@ corr <- function(directory, threshold=0){
     if(df$nobs>threshold){
       fn<-sprintf("%s/%s.csv",directory,id)
       monitor_var <- read.csv(fn, header=TRUE)
-      xtp<-round(cor(monitor_var[,2],monitor_var[,3],use="complete.obs"),digits=5)
+      ##xtp<-round(cor(monitor_var[,2],monitor_var[,3],use="complete.obs"),digits=5)
+      xtp<-(cor(monitor_var[,2],monitor_var[,3],use="complete.obs"))
       idvec<-c(idvec,xtp)
     }
   }

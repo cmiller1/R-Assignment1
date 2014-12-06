@@ -1,4 +1,4 @@
-complete <- function(directory, id){
+complete <- function(directory, id=1:332){
   
   idvec<-0
   ccvec<-0
